@@ -19,6 +19,9 @@ module.exports = {
         '84': '21rem',
         '96': '24rem',
       },
+      fontFamily: {
+        sans: ['DM Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [

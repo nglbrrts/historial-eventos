@@ -1,6 +1,6 @@
 'use client';
 
-import '@/app/globals.css'
+import '../styles/globals.css'
 import TopBar from '../components/TopBar';
 
 export default function RootLayout({
@@ -17,3 +17,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+
