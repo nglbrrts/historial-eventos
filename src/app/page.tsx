@@ -1,18 +1,16 @@
-'use client';
-
-import TabNavigation from '@/components/TabNavigation';
-import TopBar from "@/components/TopBar";
-
-const tabs = [
-  { name: 'Empresa', href: '#', current: true },
-  { name: 'Productos', href: '#', current: false },
-  { name: 'DTEs', href: '#', current: false },
-];
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <main>
-      <TopBar />
-    </main>
+    <div>
+      <Head>
+        <title>Inicio</title>
+        <meta name="description" content="Página de inicio de mi aplicación" />
+      </Head>
+      <section>
+        <h1>Bienvenido a la Página de Inicio</h1>
+        <p>Este es el contenido de la página de inicio.</p>
+      </section>
+    </div>
   );
 }

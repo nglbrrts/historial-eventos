@@ -28,7 +28,7 @@ const ThemeToggle: React.FC = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className="text-black dark:text-white hover:bg-neutral-100 border border-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-700 rounded-full p-3 transition-all">
+    <button onClick={toggleTheme} className="text-black dark:text-white hover:bg-neutral-100 border border-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-700 rounded-full p-1.5 transition-all">
     {theme === 'dark' ? (
       <SunIcon className="w-6 h-6" />
     ) : (
