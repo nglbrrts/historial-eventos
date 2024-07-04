@@ -7,7 +7,7 @@ import Tooltip from './Tooltip';
 const CompanyData: React.FC = () => {
     return (
         <div className="w-[360px] h-full p-3 bg-white dark:bg-neutral-800 flex-col justify-start items-start gap-4 inline-flex">
-            <div className="self-stretch h-14 flex-col justify-start items-start gap-3 flex">
+            <div className="self-stretch h-fit flex-col justify-start items-start gap-3 flex">
                 <div className="self-stretch p-2 bg-neutral-100 dark:bg-neutral-700 rounded-xl justify-start items-center gap-3 inline-flex">
                     <button type="button" className="text-neutral-900 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
                         <ChevronLeftIcon width={20} />

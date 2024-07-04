@@ -26,15 +26,15 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ origin, time, title, childr
                     <div className="size-2 rounded-full bg-gray-400 dark:bg-neutral-600"></div>
                 </div>
             </div>
-            <div className="w-full h-fit p-3 bg-white rounded-lg flex-col justify-start items-start gap-3 inline-flex mb-5">
-                <div className="self-stretch justify-between items-center inline-flex">
-                    <div className="text-gray-500 text-sm font-normal font-['Inter']">{origin}</div>
-                    <div className="text-gray-500 text-sm font-normal font-['Inter']">{time}</div>
+            <div className="w-full h-fit p-3 bg-white dark:bg-neutral-800 rounded-lg flex-col justify-start items-start gap-3 inline-flex mb-5 border border-neutral-200 dark:border-neutral-700">
+                <div className="self-stretch justify-between items-center inline-flex text-gray-600 dark:text-gray-400 text-sm font-normal font-['Inter']">
+                    <div>{origin}</div>
+                    <div>{time}</div>
                 </div>
                 <div className="self-stretch justify-start items-center gap-1 inline-flex">
                     {iconMap[type]}
                     <div className="grow shrink basis-0">
-                        <span className="text-black text-base font-normal font-['Inter']">{title}</span>
+                        <span className="text-neutral-900 dark:text-white text-base font-normal font-['Inter']">{title}</span>
                     </div>
                 </div>
                 <div className='w-full flex flex-col gap-1'>

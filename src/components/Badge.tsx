@@ -6,16 +6,16 @@ type BadgeProps = {
 
 const stateStyles = {
   habilitado: {
-    bgColor: 'bg-teal-100',
-    textColor: 'text-emerald-500',
+    bgColor: 'bg-teal-100 dark:bg-teal-900',
+    textColor: 'text-teal-600 dark:text-teal-300',
   },
   sincronizado: {
-    bgColor: 'bg-teal-100',
-    textColor: 'text-emerald-500',
+    bgColor: 'bg-teal-100 dark:bg-teal-900',
+    textColor: 'text-teal-600 dark:text-teal-300',
   },
   deshabilitado: {
-    bgColor: 'bg-gray-100',
-    textColor: 'text-gray-500',
+    bgColor: 'bg-neutral-100 dark:bg-neutral-700',
+    textColor: 'text-gray-500 dark:text-neutral-400',
   },
 
 };

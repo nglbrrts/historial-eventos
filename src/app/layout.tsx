@@ -10,9 +10,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="bg-neutral-50 dark:bg-neutral-900">
+      <body className="bg-neutral-50 dark:bg-neutral-900 overflow-hidden">
         <TopBar />
-        <main>{children}</main>
+        <main className='h-full'>{children}</main>
       </body>
     </html>
   );

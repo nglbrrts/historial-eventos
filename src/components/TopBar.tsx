@@ -6,7 +6,7 @@ import { ArrowRightStartOnRectangleIcon } from '@heroicons/react/24/outline';
 
 const TopBar: React.FC = () => {
     return (
-        <header className=">flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4 dark:bg-neutral-800 border-b border-neutral-100">
+        <header className=">flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4 dark:bg-neutral-800 border-b border-neutral-100 dark:border-neutral-700">
             <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
                 <div className="flex items-center justify-between gap-5">
                     <Link href="/" className="flex-none text-xl font-bold dark:text-white">Loki</Link>
