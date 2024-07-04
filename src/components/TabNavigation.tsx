@@ -25,7 +25,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ tabs }) => {
         <select
           id="tabs"
           name="tabs"
-          className="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+          className="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-blue-300"
           value={currentTab}
           onChange={(e) => handleTabClick(e.target.value)}
         >
