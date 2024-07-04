@@ -1,11 +1,15 @@
 import React from 'react';
 
 type BadgeProps = {
-  state: 'habilitado' | 'deshabilitado';
+  state: 'habilitado' | 'deshabilitado' | 'sincronizado';
 };
 
 const stateStyles = {
   habilitado: {
+    bgColor: 'bg-teal-100',
+    textColor: 'text-emerald-500',
+  },
+  sincronizado: {
     bgColor: 'bg-teal-100',
     textColor: 'text-emerald-500',
   },

@@ -21,13 +21,13 @@ const CompanyData: React.FC = () => {
                     10/06/2020 12:00
                 </CompanyDataInfo>
                 <CompanyDataInfo title="Credenciales empresa SII">
-                    <Badge state="habilitado" />
+                    <Badge state="sincronizado" />
                 </CompanyDataInfo>
                 <CompanyDataInfo title="Credenciales Rep. Legal">
-                    <Badge state="habilitado" />
+                    <Badge state="sincronizado" />
                 </CompanyDataInfo>
                 <CompanyDataInfo title="Certificado Digital">
-                    <Badge state="habilitado" />
+                    <Badge state="sincronizado" />
                 </CompanyDataInfo>
             </div>
             <div className="self-stretch h-px bg-neutral-100 dark:bg-neutral-700" />
@@ -52,17 +52,21 @@ const CompanyData: React.FC = () => {
                 </CompanyDataInfo>
                 <CompanyDataInfo title="Certificado deuda">
                     Hace 18 horas
-                    <button type="button" className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
-                        <ArrowDownTrayIcon width={20} />
-                        <span className="sr-only">Descargar</span>
-                    </button>
+                    <Tooltip message="Descargar certificado deuda">
+                        <button type="button" className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
+                            <ArrowDownTrayIcon width={20} />
+                            <span className="sr-only">Descargar certificado deuda</span>
+                        </button>
+                    </Tooltip>
                 </CompanyDataInfo>
                 <CompanyDataInfo title="Actualizar TGR">
                     Hace 18 horas
-                    <button type="button" className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
-                        <ArrowPathIcon width={20} />
-                        <span className="sr-only">Actualizar</span>
-                    </button>
+                    <Tooltip message="Actualizar TGR">
+                        <button type="button" className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
+                            <ArrowPathIcon width={20} />
+                            <span className="sr-only">Actualizar TGR</span>
+                        </button>
+                    </Tooltip>
                 </CompanyDataInfo>
                 <div className="self-stretch h-px bg-neutral-100 dark:bg-neutral-700" />
                 <CompanyDataInfo title="DTEs">
@@ -72,16 +76,18 @@ const CompanyData: React.FC = () => {
                     Hace 18 horas
                 </CompanyDataInfo>
                 <CompanyDataInfo title="Carpeta Tributaria">
-                    <Tooltip message="Este es un tooltip">
+                    <Tooltip message="Actualizar carpeta tributaria">
                         <button type="button" className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
                             <ArrowPathIcon width={20} />
-                            <span className="sr-only">Actualizar</span>
+                            <span className="sr-only">Actualizar carpeta tributaria</span>
                         </button>
                     </Tooltip>
-                    <button type="button" className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
-                        <ArrowDownTrayIcon width={20} />
-                        <span className="sr-only">Descargar</span>
-                    </button>
+                    <Tooltip message="Descargar carpeta tributaria">
+                        <button type="button" className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
+                            <ArrowDownTrayIcon width={20} />
+                            <span className="sr-only">Descargar carpeta tributaria</span>
+                        </button>
+                    </Tooltip>
                 </CompanyDataInfo>
             </div>
 
