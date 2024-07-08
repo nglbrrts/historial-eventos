@@ -10,7 +10,7 @@ type DteTimelineItemProps = {
 
 const iconMap = {
     approved: <CheckCircleIcon width={18} className='text-teal-500' />,
-    created: <PaperAirplaneIcon width={18} className='text-teal-500' />,
+    created: <PaperAirplaneIcon width={18} className='text-indigo-500' />,
     funded: <CurrencyDollarIcon width={18} className='text-teal-500' />,
     transferred: <PaperAirplaneIcon width={18} className='text-indigo-500' />,
     unfunded: <CurrencyDollarIcon width={18} className='text-neutral-500' />,
