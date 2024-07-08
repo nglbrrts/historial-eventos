@@ -6,8 +6,8 @@ type DateDisplayProps = {
 
 const DateDisplay: React.FC<DateDisplayProps> = ({ date }) => {
   return (
-    <div className="w-[120px] h-[43px] py-3 justify-center items-center gap-2 inline-flex">
-      <div className="text-gray-600 dark:text-gray-400 text-base font-normal font-['Inter']">
+    <div className="w-full  py-3 justify-start items-center gap-2 inline-flex">
+      <div className="text-neutral-600 dark:text-neutral-400 text-base font-normal font-['Inter']">
         {date}
       </div>
     </div>

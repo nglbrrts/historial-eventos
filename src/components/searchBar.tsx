@@ -9,7 +9,13 @@ const SearchBar: React.FC = () => {
                     <path d="m21 21-4.3-4.3"></path>
                 </svg>
             </div>
-            <input className="py-3 hover:ps-10 pe-4 block w-12 h-12 hover:w-64 transition-all duration-300 ease-in-out border-gray-200 rounded-full text-sm focus:border-indigo-500 focus:ring-blue-300 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 placeholder-transparent  hover:placeholder-neutral-600 dark:hover:placeholder-neutral-400" type="text" placeholder="Buscar empresas" value="" data-hs-combo-box-input="" />
+            <input
+                className="py-3 hover:ps-10 pe-4 block w-12 h-12 hover:w-64 transition-all duration-300 ease-in-out border-gray-200 rounded-full text-sm focus:border-indigo-500 focus:ring-blue-300 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 placeholder-transparent hover:placeholder-neutral-600 dark:hover:placeholder-neutral-400"
+                type="text"
+                placeholder="Buscar empresas"
+                defaultValue=""
+                data-hs-combo-box-input=""
+            />
         </div>
     )
 }

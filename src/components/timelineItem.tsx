@@ -1,21 +1,22 @@
 import React, { ReactNode } from 'react';
-import { PlusCircleIcon, ArrowPathIcon, CurrencyDollarIcon, DocumentIcon, DocumentTextIcon, Cog8ToothIcon } from '@heroicons/react/24/outline';
+import { PlusCircleIcon, ArrowPathIcon, CurrencyDollarIcon, DocumentIcon, DocumentTextIcon, Cog8ToothIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline';
 
 type TimelineItemProps = {
     origin: string;
     time: string;
     title: ReactNode;
-    children: ReactNode;
-    type: 'add' | 'sync' | 'terms' | 'simulation' | 'operation' | 'backoffice';
+    children?: ReactNode;
+    type: 'add' | 'sync' | 'terms' | 'simulation' | 'operation' | 'backoffice' | 'transferred';
 };
 
 const iconMap = {
-    add: <PlusCircleIcon width={18} className='text-emerald-500' />,
+    add: <PlusCircleIcon width={18} className='text-teal-500' />,
     sync: <ArrowPathIcon width={18} className='text-indigo-500' />,
-    terms: <CurrencyDollarIcon width={18} className='text-emerald-500' />,
+    terms: <CurrencyDollarIcon width={18} className='text-teal-500' />,
     simulation: <DocumentIcon width={18} className='text-indigo-500' />,
     operation: <DocumentTextIcon width={18} className='text-indigo-500' />,
     backoffice: <Cog8ToothIcon width={18} className='text-neutral-500' />,
+    transferred: <PaperAirplaneIcon width={18} className='text-indigo-500' />,
 };
 
 const TimelineItem: React.FC<TimelineItemProps> = ({ origin, time, title, children, type }) => {
@@ -37,9 +38,11 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ origin, time, title, childr
                         <span className="text-neutral-900 dark:text-white text-base font-normal font-['Inter']">{title}</span>
                     </div>
                 </div>
-                <div className='w-full flex flex-col gap-1'>
-                    {children}
-                </div>
+                {children && (
+                    <div className='w-full flex flex-col gap-1'>
+                        {children}
+                    </div>
+                )}
             </div>
         </div>
     );
