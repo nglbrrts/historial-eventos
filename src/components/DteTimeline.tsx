@@ -6,7 +6,7 @@ import Link from 'next/link';
 const DteTimeline: React.FC = () => {
     return (
 
-        <div className="w-[360px] h-full pb-20 overflow-scroll bg-white dark:bg-neutral-800 flex-col justify-start items-start gap-4 inline-flex">
+        <div className="h-full w-[400px] pb-20 overflow-scroll bg-white dark:bg-neutral-800 flex-col justify-start items-start gap-4 inline-flex">
             <div className=" bg-white dark:bg-neutral-800 p-3 self-stretch text-black dark:text-white text-base font-bold font-['Inter'] sticky top-0">
                 Detalle factura folio N°21414
             </div>
