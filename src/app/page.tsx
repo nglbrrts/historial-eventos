@@ -29,7 +29,9 @@ export default function Home() {
       <Head>
         <title>Inicio</title>
         <meta name="description" content="Loki" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  
+          <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
       </Head>
       <section className='flex flex-row gap-0 h-full'>
         <div className='w-[360px] h-full flex-grow-0 min-w-84 hidden md:flex flex-col overflow-y-scroll z-50 p-3 bg-white dark:bg-neutral-800 gap-4'>
