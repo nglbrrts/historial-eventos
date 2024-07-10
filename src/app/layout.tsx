@@ -13,6 +13,7 @@ export default function RootLayout({
       <body className="bg-neutral-50 dark:bg-neutral-900 overflow-hidden">
         <TopBar />
         <main className='h-full'>{children}</main>
+        <div id="tooltip-root"></div>
       </body>
     </html>
   );

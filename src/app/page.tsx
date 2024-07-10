@@ -1,10 +1,11 @@
 "use client"
-import CompanyData from '@/components/CompanyData';
 import EventTimeline from '@/components/EventTimeline';
 import Head from 'next/head';
 import DteTimeline from '@/components/DteTimeline';
 import { useState } from 'react';
 import Drawer from '@/components/Drawer';
+import CompanyTitleBox from '@/components/CompanyTitleBox';
+import CompanyDataContent from '@/components/CompanyDataContent';
 
 
 export default function Home() {
@@ -31,8 +32,9 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
       </Head>
       <section className='flex flex-row gap-0 h-full'>
-        <div className='w-[360px] h-full flex-grow-0 min-w-84 hidden md:flex overflow-y-scroll z-50'>
-          <CompanyData />
+        <div className='w-[360px] h-full flex-grow-0 min-w-84 hidden md:flex flex-col overflow-y-scroll z-50 p-3 bg-white dark:bg-neutral-800 gap-4'>
+          <CompanyTitleBox />
+          <CompanyDataContent />
         </div>
         <div className='h-full flex-grow p-6 overflow-y-scroll z-30 flex flex-col gap-3'>
           <button onClick={toggleDrawer} className="md:hidden">
