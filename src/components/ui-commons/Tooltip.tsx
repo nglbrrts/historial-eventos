@@ -35,7 +35,7 @@ const Tooltip: React.FC<TooltipProps> = ({ message, children }) => {
       {children}
       {isVisible && (
         <TooltipPortal>
-          <div ref={tooltipRef} style={{ position: 'absolute', top: tooltipPosition.top, left: tooltipPosition.left }} className="z-50 p-2 bg-neutral-900 text-white text-xs rounded">
+          <div ref={tooltipRef} style={{ position: 'absolute', top: tooltipPosition.top, left: tooltipPosition.left }} className="z-50 p-2 bg-neutral-900 text-white text-xs rounded text-center">
             {message}
           </div>
         </TooltipPortal>

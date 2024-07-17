@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from "@/components/SearchBar";
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 import Link from 'next/link';
 import { ArrowRightStartOnRectangleIcon } from '@heroicons/react/24/outline';
 
