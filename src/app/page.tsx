@@ -1,41 +1,9 @@
 "use client"
-import EventTimeline from '@/components/company-timeline/EventTimeline';
+import LatestCompanies from '@/components/home/LatestCompanies';
 import Head from 'next/head';
-import DteTimeline from '@/components/dte-data/DteTimeline';
-import { useState } from 'react';
-import Drawer from '@/components/company-data/Drawer';
-import CompanyTitleBox from '@/components/company-data/CompanyTitleBox';
-import CompanyDataContent from '@/components/company-data/CompanyDataContent';
-import ReusableModal from '@/components/ui-commons/ReusableModal';
-import { CheckIcon } from '@heroicons/react/24/outline';
+
 
 export default function Home() {
-  //open DTE timeline
-  const [isActive, setIsActive] = useState(false);
-  //open company Drawer
-  const [isDrawerOpen, setDrawerOpen] = useState(false);
-  // open modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  //open DTE timeline
-  const handleLinkClick = () => {
-    setIsActive(!isActive);
-  };
-
-  //open company drawer
-  const toggleDrawer = () => {
-    setDrawerOpen(!isDrawerOpen);
-  };
-
-  // open modal
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  // close modal
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <>
@@ -46,40 +14,18 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
       </Head>
-      {/* Modal */}
-      <ReusableModal
-        open={isModalOpen}
-        setOpen={setIsModalOpen}
-        title="Payment successful"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet labore."
-        icon={CheckIcon}
-        buttonText="Go back to dashboard"
-        onButtonClick={closeModal}
-      >
-        <div className="mt-4">
-          <p className="text-sm text-gray-500">This is additional content passed as children.</p>
+      <div className='flex flex-col gap-0 h-full w-full justify-center align-middle p-6 gap-y-4'>
+        <div className="w-[388px] h-[50px] p-2 bg-white rounded-xl mx-auto border border-neutral-200 justify-center items-center gap-3 inline-flex">
+          <svg className="flex-shrink-0 size-4 text-gray-400 dark:text-white/60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <div className="grow shrink basis-0 text-neutral-800 dark:text-white text-sm font-semibold leading-tight">Encuentra empresas por razón social o RUT...</div>
         </div>
-      </ReusableModal>
-      <section className='flex flex-row gap-0 h-full'>
-        <div className='w-[360px] h-full flex-grow-0 min-w-84 hidden md:flex flex-col overflow-y-scroll z-50 p-3 bg-white dark:bg-neutral-800 gap-4'>
-          <CompanyTitleBox />
-          <CompanyDataContent openModal={openModal} />
+        <div className='bg-white w-full max-w-5xl mx-auto p-3 rounded-xl'>
+        <LatestCompanies />
         </div>
-        <div className='h-full flex-grow p-6 overflow-y-scroll z-30 flex flex-col gap-3'>
-          <button onClick={toggleDrawer} className="md:hidden">
-            <div className="w-full text-left p-4 bg-white dark:bg-neutral-800 rounded-xl justify-start items-center gap-3 border border-neutral-200 dark:border-neutral-700 ">
-              <p className="text-neutral-800 dark:text-white text-sm font-bold font-['Inter'] leading-tight">ESTUDIO DE DISENO GALGA LIMITADA<br /> </p>
-              <p className="text-neutral-600 dark:text-neutral-400 text-sm font-normal font-['Inter'] leading-tight">76.801.025-6</p>
-            </div>
-          </button>
-          <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
-          <EventTimeline onLinkClick={handleLinkClick} />
-        </div>
-        <div className={`h-full ease-in-out duration-500  flex-grow-0 overflow-y-scroll ${isActive ? 'w-[400px]' : 'w-0'}`}>
-          <DteTimeline />
-        </div>
-      </section>
-
+      </div>
     </>
   );
 }

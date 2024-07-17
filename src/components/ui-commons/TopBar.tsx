@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBar from "@/components/SearchBar";
 import ThemeToggle from "./ThemeToggle";
 import Link from 'next/link';
 import { ArrowRightStartOnRectangleIcon } from '@heroicons/react/24/outline';
@@ -11,7 +10,6 @@ const TopBar: React.FC = () => {
                 <div className="flex items-center justify-between gap-5">
                     <div className='flex items-center justify-start flex-row gap-5'>
                         <Link href="/" className="flex-none text-xl font-bold dark:text-white">Loki</Link>
-                        <SearchBar />
                     </div>
                     <div className="sm:hidden">
                         <button type="button" className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
@@ -22,9 +20,8 @@ const TopBar: React.FC = () => {
                 </div>
                 <div id="navbar-collapse-with-animation" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
                     <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-                        <Link href="/" className="font-normal text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500">Empresas</Link>
+                        <Link href="/" className="font-normal text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500">Inicio</Link>
                         <Link href="/configuracion" className="font-normal text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500">Configuraciones</Link>
-                        <Link href="/eventos" className="font-normal text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500">Eventos</Link>
 
                         <button
                             type="button"
