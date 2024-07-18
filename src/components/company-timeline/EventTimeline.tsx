@@ -4,7 +4,7 @@ import DateDisplay from './DateDisplay';
 import Link from 'next/link';
 import TimelineStepper from './TimelineStepper';
 import { FDstage01, FDstage02, FDstage03, FDstage04, FDstage05 } from '../../app/data/fundingstages'
-import FilterOptions from './FilterOptions';
+import FilterOptions from './filter/FilterOptions';
 
 type EventTimelineProps = {
     onLinkClick: () => void;
