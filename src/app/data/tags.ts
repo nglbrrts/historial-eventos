@@ -17,9 +17,10 @@
 //     'Rechazo',
 //   ];
   
+import { FilterType } from '../../types/types';
 
-export const filterTags = {
-  Empresa: ['Sincronización', 'Alta legal', 'Credenciales'],
-  Productos: ['Financiamiento Directo', 'Pronto Pago', 'Confirming'],
-  Facturas: ['Operación', 'Simulación', 'Condiciones comerciales', 'Oferta'],
+export const filterTags: Record<FilterType, string[]> = {
+  Empresa: ['Sincronización', 'Alta legal', 'Credenciales', 'Carpeta tributaria'],
+  Productos: ['Financiamiento Directo', 'Pronto Pago', 'Confirming', 'Operación', 'Simulación', 'Condiciones comerciales', 'Aprobación', 'Rechazo' ],
+  Facturas: ['Sincronización', 'Oferta', 'Operación', 'Simulación'],
 };
