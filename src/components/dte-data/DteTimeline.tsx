@@ -2,22 +2,32 @@ import React from 'react';
 import DteTimelineItem from './DteTimelineItem';
 import DateDisplay from '../company-timeline/DateDisplay';
 import Link from 'next/link';
-import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
+import { ArrowDownTrayIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Tooltip from '../ui-commons/Tooltip';
 
-
-const DteTimeline: React.FC = () => {
+type DteTimelineProps = {
+    onLinkClick: () => void;
+  };
+  const DteTimeline: React.FC<DteTimelineProps> = ({ onLinkClick }) => {
     return (
 
         <div className="h-full w-[400px] pb-20 overflow-scroll bg-white dark:bg-neutral-800 flex-col justify-start items-start gap-4 inline-flex">
             <div className=" bg-white dark:bg-neutral-800 p-3 self-stretch text-black dark:text-white text-base font-bold font-['Inter'] sticky top-0 flex flex-row justify-between">
                 Detalle factura folio N°21414
-                <Tooltip message="Descargar XML">
-                    <button type="button" className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
-                        <ArrowDownTrayIcon width={20} />
-                        <span className="sr-only">Descargar XML</span>
+                <div className='flex flex-row gap-2'>
+                    <Tooltip message="Descargar XML">
+                        <button type="button" className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
+                            XML&nbsp;<ArrowDownTrayIcon width={20} />
+                            <span className="sr-only">Descargar XML</span>
+                        </button>
+                    </Tooltip>
+                    {/* Este es el botón para cerrar */}
+                    <button type="button" onClick={onLinkClick} className="text-neutral-600 dark:text-white transition-all duration-150 bg-neutral-100 hover:bg-neutral-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-blue-800" >
+                        <XMarkIcon width={20} />
+                        <span className="sr-only">Cerrar panel</span>
                     </button>
-                </Tooltip>
+                    {/* Este es el botón para cerrar */}
+                </div>
             </div>
             <div className="self-stretch h-fit flex-col justify-start items-center gap-2 flex px-3">
                 <div className="self-stretch justify-start items-start gap-2 inline-flex">

@@ -78,7 +78,7 @@ export default function Empresa() {
           <EventTimeline onLinkClick={handleLinkClick} />
         </div>
         <div className={`h-full ease-in-out duration-500  flex-grow-0 overflow-y-scroll ${isActive ? 'w-[400px]' : 'w-0'}`}>
-          <DteTimeline />
+          <DteTimeline onLinkClick={handleLinkClick} />
         </div>
       </section>
 

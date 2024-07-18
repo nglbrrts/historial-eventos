@@ -1,7 +1,7 @@
 "use client"
+import FailedSims from '@/components/home/FailedSims';
 import LatestCompanies from '@/components/home/LatestCompanies';
 import Head from 'next/head';
-
 
 export default function Home() {
 
@@ -10,20 +10,22 @@ export default function Home() {
       <Head>
         <title>Inicio</title>
         <meta name="description" content="Loki" />
-
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
       </Head>
-      <div className='flex flex-col gap-0 h-full w-full justify-center align-middle p-6 gap-y-4'>
-        <div className="w-[388px] h-[50px] p-2 bg-white rounded-xl mx-auto border border-neutral-200 justify-center items-center gap-3 inline-flex">
-          <svg className="flex-shrink-0 size-4 text-gray-400 dark:text-white/60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.3-4.3"></path>
-          </svg>
-          <div className="grow shrink basis-0 text-neutral-800 dark:text-white text-sm font-semibold leading-tight">Encuentra empresas por razón social o RUT...</div>
+      <div className='overflow-scroll h-full'>
+        <div className='flex flex-col gap-0 h-fit md:h-1/3 w-full justify-center align-middle p-6 gap-y-4'>
+          <input type="text" className="h-14 w-[500px] max-w-[90%] pr-8 pl-5 mx-auto rounded-xl z-0 focus:shadow focus:outline-none border border-neutral-200" placeholder="Encuentra empresas por razón social o RUT..." />
         </div>
-        <div className='bg-white w-full max-w-5xl mx-auto p-3 rounded-xl'>
-        <LatestCompanies />
+        <div className='flex flex-col md:flex-row gap-6 max-w-7xl mx-auto p-3'>
+          <div className='bg-white dark:bg-neutral-800 w-full p-3 rounded-xl flex flex-col gap-3'>
+            <h3 className='text-xl font-medium text-neutral-600 dark:text-neutral-400'>Últimas empresas registradas</h3>
+            <LatestCompanies />
+          </div>
+          <div className='bg-white dark:bg-neutral-800 w-full p-3 rounded-xl flex flex-col gap-3'>
+            <h3 className='text-xl font-medium text-neutral-600 dark:text-neutral-400'>Simulaciones fallidas</h3>
+            <FailedSims />
+          </div>
         </div>
       </div>
     </>
