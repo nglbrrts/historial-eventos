@@ -1,2 +1,1 @@
-// types.ts
-export type FilterType = 'Empresa' | 'Productos' | 'Facturas';
+export type FilterType = 'Empresa' | 'Productos' | 'Sólo Facturas';

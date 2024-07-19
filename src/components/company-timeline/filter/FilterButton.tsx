@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FilterType } from '../../../types/types';
 
 type FilterButtonProps = {
   label: FilterType;
+  isActive: boolean;
   onClick: (label: FilterType) => void;
 };
 
-const FilterButton: React.FC<FilterButtonProps> = ({ label, onClick }) => {
-  const [isActive, setIsActive] = useState(false);
-
+const FilterButton: React.FC<FilterButtonProps> = ({ label, isActive, onClick }) => {
   const handleClick = () => {
-    setIsActive(!isActive);
     onClick(label);
   };
 
