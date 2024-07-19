@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { FilterType } from '../../../types/types';
 
 type FilterButtonProps = {
-  label: string;
-  onClick: (label: string) => void;
+  label: FilterType;
+  onClick: (label: FilterType) => void;
 };
 
 const FilterButton: React.FC<FilterButtonProps> = ({ label, onClick }) => {

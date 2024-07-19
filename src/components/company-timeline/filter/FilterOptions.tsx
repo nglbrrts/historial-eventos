@@ -7,25 +7,25 @@ import { FilterType } from '../../../types/types';
 const FilterOptions: React.FC = () => {
     const [activeFilters, setActiveFilters] = useState<FilterType[]>([]);
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
-
+  
     const handleFilterClick = (label: FilterType) => {
-        setActiveFilters((prevFilters) => {
-            const isActive = prevFilters.includes(label);
-            if (isActive) {
-                return prevFilters.filter((filter) => filter !== label);
-            } else {
-                return [...prevFilters, label];
-            }
-        });
+      setActiveFilters((prevFilters) => {
+        const isActive = prevFilters.includes(label);
+        if (isActive) {
+          return prevFilters.filter((filter) => filter !== label);
+        } else {
+          return [...prevFilters, label];
+        }
+      });
     };
 
     useEffect(() => {
         const newSelectedTags = new Set<string>();
         activeFilters.forEach(filter => {
-            filterTags[filter].forEach(tag => newSelectedTags.add(tag));
+          filterTags[filter].forEach(tag => newSelectedTags.add(tag));
         });
         setSelectedTags(Array.from(newSelectedTags));
-    }, [activeFilters]);
+      }, [activeFilters]);
 
     return (
         <div className="w-full sticky top-1 z-[9999] h-fit p-3 bg-white dark:bg-neutral-800 rounded-xl mb-6 shadow-xl shadow-neutral-900/10 dark:shadow-neutral-950">
@@ -34,7 +34,7 @@ const FilterOptions: React.FC = () => {
                     <SearchBar />
                     <FilterButton label="Empresa" onClick={handleFilterClick} />
                     <FilterButton label="Productos" onClick={handleFilterClick} />
-                    <FilterButton label="Facturas" onClick={handleFilterClick} />
+                    <FilterButton label="Sólo facturas" onClick={handleFilterClick} />
                 </div>
                 <div className="px-4 py-1.5 bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200/80 dark:hover:bg-neutral-600/80 transition-all cursor-pointer rounded-lg justify-start items-center gap-2.5 flex">
                     <div className="text-neutral-900 dark:text-white text-sm font-medium font-['DM Sans'] leading-normal tracking-tight">Hoy</div>

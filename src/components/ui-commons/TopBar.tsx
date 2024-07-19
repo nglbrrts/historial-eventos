@@ -21,6 +21,7 @@ const TopBar: React.FC = () => {
                 <div id="navbar-collapse-with-animation" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
                     <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
                         <Link href="/" className="font-normal text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500">Inicio</Link>
+                        <Link href="/condiciones-comerciales" className="font-normal text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500">Condiciones comerciales</Link>
                         <Link href="/configuracion" className="font-normal text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500">Configuraciones</Link>
 
                         <button
