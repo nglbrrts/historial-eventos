@@ -9,38 +9,43 @@ const statuses: Record<string, string> = {
 const simulations = [
   {
     id: 1,
-    title: 'Simulación de Pronto Pago N°352',
+    companyName: 'NAUTICALNEXA LTDA',
+    date: '10 junio 2024',
     href: '',
     companyRut: '73.760.763-6',
-    companyName: 'NAUTICALNEXA LTDA',
+    product: 'Simulación de Pronto Pago N°352',
   },
   {
     id: 2,
-    title: 'Simulación de Financiamiento Directo N°312',
+    companyName: 'SERVICIOSPORTUARIOSPRIME EIRL',
+    date: '10 junio 2024',
     href: '',
     companyRut: '72.316.048-3',
-    companyName: 'SERVICIOSPORTUARIOSPRIME EIRL',
+    product: 'Simulación de Financiamiento Directo N°312',
   },
   {
     id: 3,
-    title: 'Simulación de Pronto Pago N°694',
+    companyName: 'HORIZONTEHARBOR EIRL',
+    date: '10 junio 2024',
     href: '',
     companyRut: '70.240.902-5',
-    companyName: 'HORIZONTEHARBOR EIRL',
+    product: 'Simulación de Pronto Pago N°694',
   },
   {
     id: 4,
-    title: 'Simulación de Financiamiento Directo N°12',
+    companyName: 'GRUPOGENIUS DE GEMAS EIRL',
+    date: '10 junio 2024',
     href: '',
     companyRut: '77.226.249-6',
-    companyName: 'GRUPOGENIUS DE GEMAS EIRL',
+    product: 'Simulación de Financiamiento Directo N°12',
   },
   {
     id: 5,
-    title: 'Simulación de Financiamiento Directo N°142',
+    companyName: 'EXPLORADORESDEROCAS S.A',
+    date: '10 junio 2024',
     href: '',
     companyRut: '73.968.344-1',
-    companyName: 'EXPLORADORESDEROCAS S.A',
+    product: 'Simulación de Financiamiento Directo N°142',
   },
 ];
 
@@ -54,12 +59,16 @@ export default function FailedSims() {
       {simulations.map((simulation) => (
         <li key={simulation.id} className="flex items-center justify-between gap-x-6 py-5">
           <div className="min-w-0">
-            <div className="flex items-start gap-x-3">
-              <p className="text-sm font-semibold leading-6 text-neutral-900 dark:text-white">{simulation.title}</p>
+            <div className="flex items-center gap-x-2 text-sm font-semibold leading-6 text-neutral-900 dark:text-white">
+              <p className="whitespace-nowrap">{simulation.companyName}</p>
+              <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 fill-current">
+                <circle r={1} cx={1} cy={1} />
+              </svg>
+              <p>{simulation.date}</p>
             </div>
             <div className="mt-1 flex items-center gap-x-2 text-xs leading-5 text-neutral-600 dark:text-neutral-400">
               <p className="whitespace-nowrap">
-                <span>{simulation.companyName}</span>
+                <span>{simulation.product}</span>
               </p>
               <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 fill-current">
                 <circle r={1} cx={1} cy={1} />

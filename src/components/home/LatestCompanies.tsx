@@ -2,8 +2,6 @@ import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Badge, { BadgeProps } from '@/components/company-data/Badge'; 
 
-
-
 const companies = [
   {
     id: 1,
