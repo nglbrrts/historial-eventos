@@ -35,7 +35,7 @@ const FilterOptions: React.FC = () => {
   }, [activeFilters]);
 
   return (
-    <div className="w-full sticky top-1 z-[9999] h-fit p-3 bg-white dark:bg-neutral-800 rounded-xl mb-6 shadow-xl shadow-neutral-900/10 dark:shadow-neutral-950">
+    <div className="w-full sticky top-0 z-[9999] h-fit p-3 bg-white dark:bg-neutral-800 rounded-xl mb-6 shadow-xl shadow-neutral-900/10 dark:shadow-neutral-950">
       <div className='w-full justify-between items-center inline-flex '>
         <div className="justify-start items-center gap-3 flex">
           <SearchBar />

@@ -1,5 +1,5 @@
 "use client"
-import EventTimeline from '@/components/company-timeline/EventTimeline';
+import OpsFacturas from '@/components/ops-facturas/OpsFacturas'
 import Head from 'next/head';
 import DteTimeline from '@/components/dte-data/DteTimeline';
 import { useState } from 'react';
@@ -41,7 +41,7 @@ export default function Empresa() {
   return (
     <>
       <Head>
-        <title>Detalle empresa</title>
+        <title>Operaciones y facturas</title>
         <meta name="description" content="ESTUDIO DE DISEÑO GALGA LIMITADA" />
 
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -68,7 +68,6 @@ export default function Empresa() {
           <CompanyDataContent openModal={openModal} />
         </div>
         <div className='h-full flex-grow p-6 overflow-y-scroll z-30 flex flex-col gap-3'>
-        <h1 className='text-xl text-center text-neutral-900 dark:text-white'>Historial de eventos</h1>
           <button onClick={toggleDrawer} className="md:hidden">
             <div className="w-full text-left p-4 bg-white dark:bg-neutral-800 rounded-xl justify-start items-center gap-3 border border-neutral-200 dark:border-neutral-700 ">
               <p className="text-neutral-800 dark:text-white text-sm font-bold font-['Inter'] leading-tight">ESTUDIO DE DISENO GALGA LIMITADA<br /> </p>
@@ -76,12 +75,13 @@ export default function Empresa() {
             </div>
           </button>
           <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
-          <EventTimeline onLinkClick={handleLinkClick} />
+          <OpsFacturas />
         </div>
         <div className={`h-full ease-in-out duration-500  flex-grow-0 overflow-y-scroll ${isActive ? 'w-[400px]' : 'w-0'}`}>
-          <DteTimeline onLinkClick={handleLinkClick} />
+          {/* drawer */}
         </div>
       </section>
+
     </>
   );
 }
