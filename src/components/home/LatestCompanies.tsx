@@ -1,3 +1,4 @@
+// LatestCompanies.tsx
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Badge, { BadgeProps } from '@/components/company-data/Badge'; 
@@ -49,10 +50,14 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function LatestCompanies() {
+type LatestCompaniesProps = {
+  onFirstCompanyClick: () => void;
+};
+
+export default function LatestCompanies({ onFirstCompanyClick }: LatestCompaniesProps) {
   return (
     <ul className="divide-y divide-neutral-100 dark:divide-neutral-700">
-      {companies.map((company) => (
+      {companies.map((company, index) => (
         <li key={company.id} className="flex items-center justify-between gap-x-6 py-5">
           <div className="min-w-0">
             <div className="flex items-start gap-x-3">
@@ -72,14 +77,27 @@ export default function LatestCompanies() {
             </div>
           </div>
           <div className="flex flex-none items-center gap-x-4">
-            <Link href={company.href}>
-              <button type="button" className="text-neutral-500 dark:text-neutral-400 white transition-all duration-150 bg-white hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2 text-center inline-flex items-center  dark:focus:ring-blue-800" >
+            {index === 0 ? (
+              <button
+                type="button"
+                className="text-neutral-500 dark:text-neutral-400 white transition-all duration-150 bg-white hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2 text-center inline-flex items-center dark:focus:ring-blue-800"
+                onClick={onFirstCompanyClick}
+              >
                 <ChevronRightIcon width={20} />
               </button>
-            </Link>
+            ) : (
+              <Link href={company.href}>
+                <button
+                  type="button"
+                  className="text-neutral-500 dark:text-neutral-400 white transition-all duration-150 bg-white hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2 text-center inline-flex items-center dark:focus:ring-blue-800"
+                >
+                  <ChevronRightIcon width={20} />
+                </button>
+              </Link>
+            )}
           </div>
         </li>
       ))}
-    </ul> 
+    </ul>
   );
 }
