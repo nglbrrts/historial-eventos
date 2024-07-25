@@ -1,4 +1,3 @@
-// components/FilterOptions.tsx
 import React, { useState, useEffect } from 'react';
 import SearchBar from '../../SearchBar';
 import FilterButton from './FilterButton';

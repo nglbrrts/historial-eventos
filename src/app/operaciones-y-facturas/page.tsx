@@ -1,7 +1,6 @@
 "use client"
 import OpsFacturas from '@/components/ops-facturas/OpsFacturas'
 import Head from 'next/head';
-import DteTimeline from '@/components/dte-data/DteTimeline';
 import { useState } from 'react';
 import Drawer from '@/components/company-data/Drawer';
 import CompanyTitleBox from '@/components/company-data/CompanyTitleBox';

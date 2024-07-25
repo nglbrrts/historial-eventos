@@ -1,9 +1,12 @@
 import React from 'react';
-import { ArrowUpOnSquareIcon, ArrowDownOnSquareIcon } from '@heroicons/react/20/solid';
+import { ArrowUpOnSquareIcon, ArrowDownOnSquareIcon, CurrencyDollarIcon } from '@heroicons/react/20/solid';
 import Badge from '../company-data/Badge';
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import Link from 'next/link';
+import SearchBar from '../SearchBar';
+import MonthSelector from './MonthSelector';
 
-type DtesProps = {
+type DtesRecibidasProps = {
 };
 
 const documentos = [
@@ -14,17 +17,33 @@ const documentos = [
     { folio: '9945', fecha: '25/04/24', company: 'ÓRBITAMINERAL EIRL', rut: '78.419.495-0', monto: '$13.276.163', iva: '$2.522.471 IVA' },
 ]
 
-const Dtes: React.FC<DtesProps> = (props) => {
+const DtesRecibidas: React.FC<DtesRecibidasProps> = (props) => {
     return (
-        <div className="inline-block min-w-full py-2 align-middle  border border-neutral-300 dark:border-neutral-700 rounded-xl bg-white dark:bg-neutral-800">
-            <nav aria-label="Tabs" className="flex space-x-4 p-3">
-                <a className='bg-indigo-100 dark:bg-indigo-900/90 flex flex-row align-middle justify-center gap-2 text-indigo-700 dark:text-indigo-400 rounded-md px-2 py-1 text-sm font-medium cursor-pointer'>
-                    Emitidas <ArrowUpOnSquareIcon width={18} />
-                </a>
-                <a className='text-neutral-500 hover:text-neutral-700 flex flex-row align-middle justify-center gap-2 dark:hover:text-neutral-400 rounded-md px-2 py-1 text-sm font-medium cursor-pointer'>
-                    Recibidas <ArrowDownOnSquareIcon width={18} />
-                </a>
-            </nav>
+        <div className="inline-block min-w-full py-2 align-middle border border-neutral-300 dark:border-neutral-700 rounded-xl bg-white dark:bg-neutral-800">
+            <div className='flex flex-row gap-2 justify-between p-2 border-b border-neutral-200'>
+                <div className='flex flex-row gap-3 align-middle justify-center'>
+                    <SearchBar
+                        placeholder="Buscar por folio, razón social o RUT"
+                        defaultValue=""
+                        hoverWidthClass="hover:w-72"
+                        fixedWidthClass="w-72"
+                    />
+                    <MonthSelector />
+                </div>
+                <nav aria-label="Tabs" className="flex space-x-4 p-3">
+                    <Link href="#" className='bg-indigo-100 dark:bg-indigo-900/90 flex flex-row align-middle justify-center gap-2 text-indigo-700 dark:text-indigo-400 rounded-md px-2 py-1 text-sm font-medium cursor-pointer'>
+                        Emitidas <ArrowUpOnSquareIcon width={18} />
+                    </Link>
+                    <Link href="#" className='text-neutral-500 hover:text-neutral-700 flex flex-row align-middle justify-center gap-2 dark:hover:text-neutral-400 rounded-md px-2 py-1 text-sm font-medium cursor-pointer'>
+                        Recibidas <ArrowDownOnSquareIcon width={18} />
+                    </Link>
+                    <Link href="#" className='text-neutral-500 hover:text-neutral-700 flex flex-row align-middle justify-center gap-2 dark:hover:text-neutral-400 rounded-md px-2 py-1 text-sm font-medium cursor-pointer'>
+                        Ofertas <CurrencyDollarIcon width={18} />
+                    </Link>
+                </nav>
+
+            </div>
+
             <table className="min-w-full divide-y divide-gray-300 dark:divide-neutral-700 bg-white dark:bg-neutral-800">
                 <thead>
                     <tr>
@@ -48,7 +67,7 @@ const Dtes: React.FC<DtesProps> = (props) => {
                 <tbody className="bg-white dark:bg-neutral-800 font-['Inter']">
                     {documentos.map((documento) => (
                         <tr className="even:bg-gray-50 dark:even:bg-neutral-900/40 hover:bg-gray-200/40 dark:hover:bg-neutral-700/20 cursor-pointer transition-all">
-                            <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm  text-neutral-500 dark:text-neutral-300 sm:pl-3">{documento.folio}<br />{documento.fecha}</td>
+                            <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm  text-neutral-500 dark:text-neutral-300 sm:pl-3">Folio N°{documento.folio}<br />{documento.fecha}</td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm"><span className='text-neutral-900 dark:text-white font-medium'>{documento.company}</span><br /><span className='text-neutral-500 dark:text-neutral-400'>{documento.rut}</span></td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm text-neutral-500 dark:text-neutral-300 text-right"><span className='text-neutral-900 dark:text-white font-medium'>{documento.monto}</span><br /><span className='text-neutral-500 dark:text-neutral-400'>{documento.iva}</span></td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm text-neutral-500 dark:text-neutral-300 text-center"><Badge state='aprobada' /></td>
@@ -61,4 +80,4 @@ const Dtes: React.FC<DtesProps> = (props) => {
     );
 };
 
-export default Dtes;
+export default DtesRecibidas;

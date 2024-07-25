@@ -18,7 +18,7 @@ function classNames(...classes: string[]) {
 export default function TabPills({ tabs, onTabClick }: TabPillsProps) {
   return (
     <div className="w-fit mx-auto">
-      <div className="sm:hidden">
+      <div className="md:hidden">
         <label htmlFor="tabs" className="sr-only">
           Selecciona una pestaña
         </label>
@@ -40,7 +40,7 @@ export default function TabPills({ tabs, onTabClick }: TabPillsProps) {
           ))}
         </select>
       </div>
-      <div className="hidden sm:block">
+      <div className="hidden md:block">
         <nav aria-label="Tabs" className="flex space-x-4">
           {tabs.map((tab) => (
             <a
