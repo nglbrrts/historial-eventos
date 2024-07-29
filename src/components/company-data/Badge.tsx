@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type BadgeProps = {
-  state: 'habilitado'| 'aprobada' | 'deshabilitado' | 'sincronizado' | 'no_sincronizado';
+  state: 'habilitado'| 'aprobada' | 'deshabilitado' | 'sincronizado' | 'no_sincronizado'| 'financiamiento_directo'| 'abonada';
 };
 
 const stateStyles = {
@@ -24,6 +24,14 @@ const stateStyles = {
   no_sincronizado: {
     bgColor: 'bg-neutral-100 dark:bg-neutral-700',
     textColor: 'text-gray-500 dark:text-neutral-400',
+  },
+  financiamiento_directo: {
+    bgColor: 'bg-indigo-100 dark:bg-indigo-700',
+    textColor: 'text-indigo-500 dark:text-indigo-400',
+  },
+  abonada: {
+    bgColor: 'bg-teal-100 dark:bg-teal-900',
+    textColor: 'text-teal-600 dark:text-teal-300',
   },
 };
 
