@@ -24,7 +24,7 @@ const OpsFacturas: React.FC = () => {
     };
 
     return (
-        <div className='h-full flex-grow overflow-y-scroll z-30 flex flex-col gap-6'>
+        <div className='h-full w-full mx-auto flex-grow z-30 flex flex-col gap-6'>
             <h1 className='text-xl text-center text-neutral-900 dark:text-white'>Operaciones y facturas</h1>
             <TabPills tabs={tabs} onTabClick={handleTabClick} />
             <DtesEmitidas /> 

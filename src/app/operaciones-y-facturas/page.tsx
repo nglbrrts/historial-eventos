@@ -73,10 +73,9 @@ export default function Empresa() {
               <p className="text-neutral-600 dark:text-neutral-400 text-sm font-normal font-['Inter'] leading-tight">76.801.025-6</p>
             </div>
           </button>
-          <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
           <OpsFacturas />
         </div>
-        <div className={`h-full ease-in-out duration-500  flex-grow-0 overflow-y-scroll ${isActive ? 'w-[400px]' : 'w-0'}`}>
+        <div className={`h-full ease-in-out duration-500 flex-grow-0 overflow-y-scroll ${isActive ? 'w-[400px]' : 'w-0'}`}>
           {/* drawer */}
         </div>
       </section>

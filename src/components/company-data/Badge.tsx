@@ -46,7 +46,7 @@ const Badge: React.FC<BadgeProps> = ({ state }) => {
   const { bgColor, textColor } = style;
 
   return (
-    <span className={`inline-flex items-center justify-center rounded-full ${bgColor} px-2 py-1 text-xs font-medium ${textColor} capitalize max-w-fit`}>
+    <span className={`inline-flex h-fit items-center justify-center rounded-full ${bgColor} px-2 py-1 text-xs font-medium ${textColor} capitalize max-w-fit`}>
       {state}
     </span>
   );

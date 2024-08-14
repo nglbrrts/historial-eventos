@@ -69,24 +69,24 @@ type DteTimelineProps = {
                 <DteTimelineItem time="12:00" type="funded" title="Factura financiada por Guou" >
                 </DteTimelineItem>
                 <DteTimelineItem time="12:00" type="transferred" title="Cedida por el deudor a:" >
-                    <div className="w-full px-2 py-1 bg-neutral-100 dark:bg-neutral-700 rounded text-black dark:text-white text-sm font-bold font-['Inter']">
+                    <div className="w-full px-2 py-1 bg-neutral-100 dark:bg-neutral-700 rounded text-black dark:text-white text-base font-bold font-['Inter']">
                         EMPRESA CONSTRUCTORA SPA • 76.345.545-5
                     </div>
                 </DteTimelineItem>
                 <DteTimelineItem time="12:00" type="funded" title="Ingresa a operación" >
                     <div className="w-full px-2 py-1 bg-neutral-100 dark:bg-neutral-700 rounded text-black dark:text-white text-base font-normal font-['Inter']">
-                        <Link href="#" className="text-indigo-600 dark:text-indigo-400 text-sm font-normal font-['Inter']">Financiamiento Directo N°124 🔗</Link>
+                        <Link href="#" className="text-indigo-600 dark:text-indigo-400 text-base font-normal font-['Inter']">Financiamiento Directo N°124 🔗</Link>
                     </div>
                 </DteTimelineItem>
                 <DteTimelineItem time="12:00" type="funded" title="Se modifica oferta" >
-                    <div className="w-full px-2 py-1 bg-neutral-100 dark:bg-neutral-700 rounded text-black dark:text-white text-sm font-bold font-['Inter']">
+                    <div className="w-full px-2 py-1 bg-neutral-100 dark:bg-neutral-700 rounded text-black dark:text-white text-base font-bold font-['Inter']">
                         Dif. precio 1.2%
                     </div>
                 </DteTimelineItem>
                 <DateDisplay date="9 Octubre 2024" />
 
                 <DteTimelineItem time="12:00" type="funded" title="Se habilita oferta " >
-                    <div className="w-full px-2 py-1 bg-neutral-100 dark:bg-neutral-700 rounded text-black dark:text-white text-sm font-bold font-['Inter']">
+                    <div className="w-full px-2 py-1 bg-neutral-100 dark:bg-neutral-700 rounded text-black dark:text-white text-base font-bold font-['Inter']">
                         Dif. precio 1.4%
                     </div>
                 </DteTimelineItem>

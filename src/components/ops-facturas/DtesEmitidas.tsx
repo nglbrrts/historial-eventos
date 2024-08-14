@@ -30,8 +30,8 @@ const documentos = [
 const DtesEmitidas: React.FC<DtesEmitidasProps> = (props) => {
     return (
         <>
-            <div className='flex flex-col md:flex-row  gap-2 justify-between p-2 rounded-2xl bg-white dark:bg-neutral-800'>
-                <div className='flex flex-col md:flex-row gap-3 align-middle justify-center'>
+            <div className='sticky top-0 z-[9999] border border-neutral-200 h-fit flex flex-col md:flex-row  gap-2 justify-between p-2 rounded-2xl bg-white dark:bg-neutral-800 shadow-lg shadow-neutral-400/10 dark:shadow-neutral-950'>
+                <div className='flex flex-row gap-3 align-middle justify-center'>
                     <SearchBar
                         placeholder="Buscar por folio, razón social o RUT"
                         defaultValue=""
@@ -53,7 +53,7 @@ const DtesEmitidas: React.FC<DtesEmitidasProps> = (props) => {
                 </nav>
             </div>
             <div className="min-w-full flex flex-col gap-1 font-['Inter']">
-                <div className=' flex flex-row gap-0 text-sm font-semibold text-neutral-900 dark:text-white'>
+                <div className='hidden md:flex flex-row gap-0 text-sm font-semibold text-neutral-900 dark:text-white'>
                     <div className='w-[140px] py-4 px-4'>Documento</div>
                     <div className='flex-grow py-4 px-4'>Receptor</div>
                     <div className='w-[160px] py-4 px-4 text-right'>Monto total</div>
@@ -61,7 +61,7 @@ const DtesEmitidas: React.FC<DtesEmitidasProps> = (props) => {
                     <div className='w-14 py-4 pl-4 pr-3 text-sm text-neutral-900 dark:text-white font-medium'></div>
                 </div>
                 {documentos.map((documento) => (
-                    <div className='bg-white hover:bg-gray-100/80 rounded-2xl border border-neutral-200 flex flex-row gap-0 cursor-pointer'>
+                    <div className='bg-white hover:bg-gray-100/80 rounded-2xl border border-neutral-200 hidden md:flex flex-row gap-0 cursor-pointer'>
                         <div className='w-[140px] py-4 pl-4 pr-3 text-sm  text-neutral-500 dark:text-neutral-300'>Folio N°{documento.folio}<br />{documento.fecha}</div>
                         <div className='flex-grow py-4 pl-4 pr-3 text-sm text-neutral-900 dark:text-white font-medium'>{documento.company}<br /><span className='text-neutral-500 dark:text-neutral-400 font-normal'>{documento.rut}</span></div>
                         <div className='w-[160px] py-4 pl-4 pr-3 text-sm text-neutral-900 dark:text-white font-medium text-right'>{documento.monto}<br /><span className='text-neutral-500 dark:text-neutral-400 font-normal'>{documento.iva}</span></div>
@@ -69,6 +69,19 @@ const DtesEmitidas: React.FC<DtesEmitidasProps> = (props) => {
                         <div className='w-14 py-4 pl-4 pr-3 flex flex-col justify-center align-middle'><ChevronRightIcon width={20} /></div>
                     </div>
                 ))}
+                {documentos.map((documento) => (
+                    <div className='bg-white hover:bg-gray-100/80 rounded-2xl border border-neutral-200 flex md:hidden flex-col gap-0 cursor-pointer p-2'>
+                        <div className='flex flex-row gap-1 justify-between p-2'>
+                            <div className='text-sm text-neutral-900 dark:text-white font-medium'>{documento.company}<br /><span className='text-neutral-500 dark:text-neutral-400 font-normal'>{documento.rut}</span></div>
+                            <div className='text-sm text-neutral-500 dark:text-neutral-300 text-right'>Folio N°{documento.folio}<br />{documento.fecha}</div>
+                        </div>
+                        <div className='flex flex-row gap-1 justify-between p-2 items-center'>
+                            <Badge state='aprobada' />
+                            <div className='text-sm text-neutral-900 dark:text-white font-medium text-right'>{documento.monto}<br /><span className='text-neutral-500 dark:text-neutral-400 font-normal'>{documento.iva}</span></div>
+                        </div>
+                    </div>
+                ))}
+
             </div>
         </>
     );
