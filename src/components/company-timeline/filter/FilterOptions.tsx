@@ -43,12 +43,12 @@ const FilterOptions: React.FC = () => {
           <FilterButton label="Sólo Facturas" isActive={activeFilters.includes('Sólo Facturas')} onClick={handleFilterClick} />
         </div>
         <div className="px-4 py-1.5 bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200/80 dark:hover:bg-neutral-600/80 transition-all cursor-pointer rounded-lg justify-start items-center gap-2.5 flex">
-          <div className="text-neutral-900 dark:text-white text-sm font-medium font-['DM Sans'] leading-normal tracking-tight">Hoy</div>
+          <div className="text-neutral-900 dark:text-white text-sm font-medium dm-sans leading-normal tracking-tight">Hoy</div>
         </div>
       </div>
       <div className="flex flex-wrap gap-x-2 h-fit">
         {selectedTags.map((tag, index) => (
-          <span key={index} className="mt-2 bg-neutral-100 hover:bg-neutral-200/80 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-neutral-900 dark:text-white border border-neutral-200 dark:border-neutral-600 px-2 py-1 rounded-lg text-xs font-normal font-['Inter'] leading-tight transition-all cursor-pointer">
+          <span key={index} className="mt-2 bg-neutral-100 hover:bg-neutral-200/80 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-neutral-900 dark:text-white border border-neutral-200 dark:border-neutral-600 px-2 py-1 rounded-lg text-xs font-normal inter leading-tight transition-all cursor-pointer">
             {tag}
           </span>
         ))}

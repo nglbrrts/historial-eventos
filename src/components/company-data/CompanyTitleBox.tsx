@@ -10,9 +10,9 @@ const CompanyTitleBox: React.FC = () => {
                 <ChevronLeftIcon width={20} />
             </Link>
             <div className='flex flex-col gap-1 w-full'>
-                <div className="grow shrink basis-0 text-neutral-800 dark:text-white text-sm font-bold font-['Inter'] leading-tight">ESTUDIO DE DISENO GALGA LIMITADA</div>
+                <div className="grow shrink basis-0 text-neutral-800 dark:text-white text-sm font-bold inter leading-tight">ESTUDIO DE DISENO GALGA LIMITADA</div>
                 <div className='flex flex-row justify-between align-middle gap-2'>
-                    <p className="text-neutral-600 dark:text-neutral-400 text-sm font-normal leading-tight font-['Inter'] h-fit pt-1">76.801.025-6</p>
+                    <p className="text-neutral-600 dark:text-neutral-400 text-sm font-normal leading-tight inter h-fit pt-1">76.801.025-6</p>
                     <div className='flex flex-row gap-2 text-neutral-900 dark:text-white'>
                         <Tooltip message='Usuarios'>
                             <UserIcon width={28} className='border border-neutral-200 dark:border-neutral-600 p-1 rounded-lg hover:bg-neutral-900/10 cursor-pointer' />

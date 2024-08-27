@@ -12,7 +12,7 @@ type EventTimelineProps = {
 
 const EventTimeline: React.FC<EventTimelineProps> = ({ onLinkClick }) => {
     return (
-        <div className="max-w-[670px] mx-auto pb-20 z-50 font-['Inter']">
+        <div className="max-w-[670px] mx-auto pb-20 z-50 inter">
             <FilterOptions  />
             <TimelineItem origin="Juan Pérez" time="12:00" type="terms" buttonLabel='Descargar XML' buttonUrl='#'  title="Emitió la factura folio N°21414 a:">
                 <div className="w-full px-2 py-1 bg-neutral-100 dark:bg-neutral-700 rounded text-black dark:text-white text-base font-normal ">

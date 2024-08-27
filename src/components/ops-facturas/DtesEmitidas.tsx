@@ -52,7 +52,7 @@ const DtesEmitidas: React.FC<DtesEmitidasProps> = (props) => {
                     </Link>
                 </nav>
             </div>
-            <div className="min-w-full flex flex-col gap-1 font-['Inter']">
+            <div className="min-w-full flex flex-col gap-1 inter">
                 <div className='hidden md:flex flex-row gap-0 text-sm font-semibold text-neutral-900 dark:text-white'>
                     <div className='w-[140px] py-4 px-4'>Documento</div>
                     <div className='flex-grow py-4 px-4'>Receptor</div>

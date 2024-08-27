@@ -29,9 +29,9 @@ const DteTimelineItem: React.FC<DteTimelineItemProps> = ({ time, title, children
                 <div className="self-stretch justify-start items-center gap-1 inline-flex">
                     {iconMap[type]}
                     <div className="grow shrink basis-0">
-                        <span className="text-neutral-900 dark:text-white !leading-tight text-base font-normal font-['Inter']">{title}</span>
+                        <span className="text-neutral-900 dark:text-white !leading-tight text-base font-normal inter">{title}</span>
                     </div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm font-normal font-['Inter']">{time}</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm font-normal inter">{time}</div>
                 </div>
                 {children && (
                     <div className='w-full flex flex-col gap-1'>

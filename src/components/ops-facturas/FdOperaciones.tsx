@@ -63,7 +63,7 @@ const FdOperaciones: React.FC<FdOperacionesProps> = (props) => {
                         </th>
                     </tr>
                 </thead>
-                <tbody className="bg-white dark:bg-neutral-800 font-['Inter']">
+                <tbody className="bg-white dark:bg-neutral-800 inter">
                     {operaciones.map((operacion) => (
                         <tr className="even:bg-gray-50 dark:even:bg-neutral-900/40 hover:bg-gray-200/40 dark:hover:bg-neutral-700/20 cursor-pointer transition-all">
                             <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm  text-neutral-500 dark:text-neutral-300 sm:pl-3">{operacion.operacion}<br /></td>

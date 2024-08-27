@@ -68,11 +68,11 @@ export default function Empresa() {
           <CompanyDataContent openModal={openModal} />
         </div>
         <div className='h-full flex-grow p-6 overflow-y-scroll z-30 flex flex-col gap-3'>
-        <h1 className='text-xl text-center text-neutral-900 dark:text-white'>Historial de eventos</h1>
+        <h1 className='text-xl text-center font-normal text-neutral-900 dark:text-white'>Historial de eventos</h1>
           <button onClick={toggleDrawer} className="md:hidden">
             <div className="w-full text-left p-4 bg-white dark:bg-neutral-800 rounded-xl justify-start items-center gap-3 border border-neutral-200 dark:border-neutral-700 ">
-              <p className="text-neutral-800 dark:text-white text-sm font-bold font-['Inter'] leading-tight">ESTUDIO DE DISENO GALGA LIMITADA<br /> </p>
-              <p className="text-neutral-600 dark:text-neutral-400 text-sm font-normal font-['Inter'] leading-tight">76.801.025-6</p>
+              <p className="text-neutral-800 dark:text-white text-sm font-bold inter leading-tight">ESTUDIO DE DISENO GALGA LIMITADA<br /> </p>
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm font-normal inter leading-tight">76.801.025-6</p>
             </div>
           </button>
           <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
