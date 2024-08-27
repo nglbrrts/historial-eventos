@@ -30,7 +30,7 @@ const documentos = [
 const DtesEmitidas: React.FC<DtesEmitidasProps> = (props) => {
     return (
         <>
-            <div className='sticky top-0 z-[9999] border border-neutral-200 h-fit flex flex-col md:flex-row  gap-2 justify-between p-2 rounded-2xl bg-white dark:bg-neutral-800 shadow-lg shadow-neutral-400/10 dark:shadow-neutral-950'>
+            <div className='sticky top-0 z-[9999] border border-neutral-200 dark:border-neutral-700 h-fit flex flex-col md:flex-row  gap-2 justify-between p-2 rounded-2xl bg-white dark:bg-neutral-800 shadow-lg shadow-neutral-400/10 dark:shadow-neutral-950'>
                 <div className='flex flex-row gap-3 align-middle justify-center'>
                     <SearchBar
                         placeholder="Buscar por folio, razón social o RUT"
@@ -61,16 +61,16 @@ const DtesEmitidas: React.FC<DtesEmitidasProps> = (props) => {
                     <div className='w-14 py-4 pl-4 pr-3 text-sm text-neutral-900 dark:text-white font-medium'></div>
                 </div>
                 {documentos.map((documento) => (
-                    <div className='bg-white hover:bg-gray-100/80 rounded-2xl border border-neutral-200 hidden md:flex flex-row gap-0 cursor-pointer'>
+                    <div key={`${documento.folio}-${documento.fecha}-${documento.rut}`} className='bg-white dark:bg-neutral-800 hover:bg-gray-100/80 dark:hover:bg-neutral-800/80 rounded-2xl border border-neutral-200 dark:border-neutral-700 hidden md:flex flex-row gap-0 cursor-pointer'>
                         <div className='w-[140px] py-4 pl-4 pr-3 text-sm  text-neutral-500 dark:text-neutral-300'>Folio N°{documento.folio}<br />{documento.fecha}</div>
                         <div className='flex-grow py-4 pl-4 pr-3 text-sm text-neutral-900 dark:text-white font-medium'>{documento.company}<br /><span className='text-neutral-500 dark:text-neutral-400 font-normal'>{documento.rut}</span></div>
                         <div className='w-[160px] py-4 pl-4 pr-3 text-sm text-neutral-900 dark:text-white font-medium text-right'>{documento.monto}<br /><span className='text-neutral-500 dark:text-neutral-400 font-normal'>{documento.iva}</span></div>
                         <div className='w-[150px] py-4 pl-4 pr-3 flex flex-col justify-center items-center align-middle'><Badge state='aprobada' /></div>
-                        <div className='w-14 py-4 pl-4 pr-3 flex flex-col justify-center align-middle'><ChevronRightIcon width={20} /></div>
+                        <div className='w-14 py-4 pl-4 pr-3 flex flex-col justify-center align-middle dark:text-white'><ChevronRightIcon width={20} /></div>
                     </div>
                 ))}
                 {documentos.map((documento) => (
-                    <div className='bg-white hover:bg-gray-100/80 rounded-2xl border border-neutral-200 flex md:hidden flex-col gap-0 cursor-pointer p-2'>
+                    <div key={`${documento.folio}-${documento.fecha}-${documento.rut}`} className='bg-white dark:bg-neutral-800 hover:bg-gray-100/80 dark:hover:bg-neutral-800/80 rounded-2xl border border-neutral-200 dark:border-neutral-700 flex md:hidden flex-col gap-0 cursor-pointer p-2'>
                         <div className='flex flex-row gap-1 justify-between p-2'>
                             <div className='text-sm text-neutral-900 dark:text-white font-medium'>{documento.company}<br /><span className='text-neutral-500 dark:text-neutral-400 font-normal'>{documento.rut}</span></div>
                             <div className='text-sm text-neutral-500 dark:text-neutral-300 text-right'>Folio N°{documento.folio}<br />{documento.fecha}</div>

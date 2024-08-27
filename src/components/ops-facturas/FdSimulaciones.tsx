@@ -64,8 +64,8 @@ const FdSimulaciones: React.FC<FdSimulacionesProps> = (props) => {
                     </tr>
                 </thead>
                 <tbody className="bg-white dark:bg-neutral-800 inter">
-                    {operaciones.map((operacion) => (
-                        <tr className="even:bg-gray-50 dark:even:bg-neutral-900/40 hover:bg-gray-200/40 dark:hover:bg-neutral-700/20 cursor-pointer transition-all">
+                    {operaciones.map((operacion, index) => (
+                        <tr key={`${operacion.operacion}-${operacion.fecha}-${index}`} className="even:bg-gray-50 dark:even:bg-neutral-900/40 hover:bg-gray-200/40 dark:hover:bg-neutral-700/20 cursor-pointer transition-all">
                             <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm  text-neutral-500 dark:text-neutral-300 sm:pl-3">{operacion.operacion}<br /></td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm"><span className='text-neutral-900 dark:text-white font-medium'>{operacion.fecha}</span></td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm text-neutral-500 dark:text-neutral-300"><span className='text-neutral-900 dark:text-white font-medium'>{operacion.facturas}</span></td>

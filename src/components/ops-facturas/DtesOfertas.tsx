@@ -65,8 +65,8 @@ const DtesOfertas: React.FC<DtesOfertasProps> = (props) => {
                     </tr>
                 </thead>
                 <tbody className="bg-white dark:bg-neutral-800 inter">
-                    {documentos.map((documento) => (
-                        <tr className="even:bg-gray-50 dark:even:bg-neutral-900/40 hover:bg-gray-200/40 dark:hover:bg-neutral-700/20 cursor-pointer transition-all">
+                    {documentos.map((documento, index) => (
+                        <tr key={`${documento.folio}-${documento.rut}-${index}`} className="even:bg-gray-50 dark:even:bg-neutral-900/40 hover:bg-gray-200/40 dark:hover:bg-neutral-700/20 cursor-pointer transition-all">
                             <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm  text-neutral-500 dark:text-neutral-300 sm:pl-3">Folio N°{documento.folio}<br />{documento.fecha}</td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm"><span className='text-neutral-900 dark:text-white font-medium'>{documento.company}</span><br /><span className='text-neutral-500 dark:text-neutral-400'>{documento.rut}</span></td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm text-neutral-500 dark:text-neutral-300 text-right"><span className='text-neutral-900 dark:text-white font-medium'>{documento.monto}</span><br /><span className='text-neutral-500 dark:text-neutral-400'>{documento.iva}</span></td>
